@@ -1,8 +1,13 @@
 import FormInput from "./FormInput";
 
-const Form = () => {
+
+const Form = (props) => {
+  const submittedValues = (enteredValues) =>{
+    props.onFormSubmit(enteredValues);
+  }
+
   return(
-    <FormInput />
+    <FormInput onSubmitHandler={submittedValues} />
   );
 }
 

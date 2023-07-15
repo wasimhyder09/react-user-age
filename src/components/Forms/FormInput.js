@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const FormInput = () => {
+const FormInput = (props) => {
   const[enteredValue, setEnteredValue] = useState({
     username: '',
     age: ''
@@ -43,7 +43,9 @@ const FormInput = () => {
         state: false
       })
     }
+    props.onSubmitHandler(enteredValue);
   }
+
 
   return(
     <div className="form">
