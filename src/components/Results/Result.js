@@ -1,6 +1,14 @@
-const Result = () => {
+import ResultList from "./ResultList";
+
+const Result = (props) => {
   return(
-    <h1>Results</h1>
+    <div className="results">
+      {props.data.map((user) => {
+        return(
+          <ResultList user={user} />
+        );
+      })}
+    </div>
   );
 }
 

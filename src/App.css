@@ -8,11 +8,26 @@ body {
   margin: 0;
   background-color: #353434;
 }
-form {
+.form,
+.results {
   background-color: #fff;
   max-width: 40%;
-  margin: 3rem auto;
+  margin: 3rem auto 0rem auto;
   border-radius: 10px;
+  padding: 5px;
+}
+.results {
+  background-color: #353434;
+  margin-top: 10px;
+}
+.user-card {
+  background-color: #4f015f;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }
 .input {
   margin: 0rem auto;
@@ -112,6 +127,11 @@ form {
   border: 1px solid #ccc;
   margin: 0.5rem 0;
   padding: 0.5rem;
+}
+.no-results {
+  margin: 35px auto;
+  text-align: center;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .modal {

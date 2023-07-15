@@ -31,12 +31,14 @@ const FormInput = (props) => {
         state: true,
         message: 'Please fill all the fields.'
       })
+      return;
     }
     else if(enteredValue.age < 0) {
       setFormError({
         state: true,
         message: 'Age can\'t be less than 0.'
       })
+      return;
     }
     else {
       setFormError({
@@ -44,6 +46,10 @@ const FormInput = (props) => {
       })
     }
     props.onSubmitHandler(enteredValue);
+    setEnteredValue({
+      username: '',
+      age: ''
+    });
   }
 
 
