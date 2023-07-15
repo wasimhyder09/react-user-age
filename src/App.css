@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  background-color: #353434;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form {
+  background-color: #fff;
+  max-width: 40%;
+  margin: 3rem auto;
+  border-radius: 10px;
+}
+.input {
+  margin: 0rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+.input.btn {
+  margin-top: 0px;
+}
+.input label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.input input {
+  font: inherit;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+.input input:focus {
+  outline: none;
+  border-color: #4f005f;
+}
+.button {
+  font: inherit;
+  border: 1px solid #4f005f;
+  background: #4f005f;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+}
+.button:hover,
+.button:active {
+  background: #741188;
+  border-color: #741188;
+}
+.button:focus {
+  outline: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+.modal {
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.header {
+  background: #4f005f;
+  padding: 1rem;
+}
+.header h2 {
+  margin: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.content {
+  padding: 1rem;
+  background-color: #fff;
+  padding: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.content p {
+  font-size: 14px;
+  color: #000;
+}
+.content .modal-btn {
+  float: right;
+}
+.actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.users {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+}
+.users ul {
+  list-style: none;
+  padding: 1rem;
+}
+.users li {
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+@media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
 }
